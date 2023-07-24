@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #28013e;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+section{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(700px);
+}
+
+.caja{
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 100px;
+}
+
+.caja .cubo{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+}
+
+.caja .cubo div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: animacionCubo 20s lin;
+}
+
+.caja .cubo div span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient( #25ffea, #04abd5);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(-100px);
+}
