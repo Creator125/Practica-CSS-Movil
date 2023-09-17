@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f0f0f;
+}
+
+.piramide{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: girar 8s linear infinite;
+}
+
+@keyframes girar{
+  0%{
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100%{
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.piramide div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.piramide div span{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( #000000, #d96ff7);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(150px) rotateX(30deg);
+  transform-origin: bottom;
+}
+
+.brillo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d96ff7;
+  transform: rotateX(90deg) translateZ(-200px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(217,111,247,0.2),
+    0 0 200px rgba(217,111,247,0.4),
+    0 0 300px rgba(217,111,247,0.6),
+    0 0 400px rgba(217,111,247,0.8),
+    0 0 500px rgba(217,111,247,0.1);
+  
+}
