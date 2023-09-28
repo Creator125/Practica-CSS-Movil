@@ -1,0 +1,20 @@
+.caja{
+  height: 15em;
+  width: 15em;
+  background-color: #fff;
+  position: relative;
+  margin: 4em;
+  border-radius: 50%;
+}
+
+.caja:before{
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  background-image: linear-gradient(to right, #45f3a0, #3ff1f9);
+  left: -10%;
+  top: -10%;
+  z-index: -1;
+  border-radius: 50%;
+}
