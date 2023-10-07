@@ -1,0 +1,49 @@
+.contenedor{
+  height: 12.5em;
+  width: 25em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input[type = "checkbox"]{
+  appearance: none;
+  webkit-appearance: none;
+  height: 5em;
+  width: 5em;
+  background-color: #d5d5d5;
+  border-radius: 0.5em;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+}
+
+label{
+  color: #1f1f1f;
+  font-size: 3.4em;
+  font-family: Arial, Sans-Serif;
+  cursor: pointer;
+}
+
+input[type = "checkbox"]:after{
+  font-family: "FontAwesome";
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 3.12em;
+  color: #fff;
+  display: none;
+}
+
+input[type = "checkbox"]:hover{
+  background-color: #a0a1a0;
+}
+
+input[type = "checkbox"]:checked{
+  background-color: #15af15;
+}
+
+input[type = "checkbox"]:checked:after{
+  display: block;
+}
